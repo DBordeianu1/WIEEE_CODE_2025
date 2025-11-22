@@ -3,7 +3,7 @@
 
 ---
 
-Our solution: ***eCloset**, an intelligent outfit recommender, will output different outfit options to wear according to the weather. It raises awareness on overconsumption and suggests users to use pieces of clothing that they already own.
+Our solution: **eCloset**, an intelligent outfit recommender, will output different outfit options to wear according to the weather. It raises awareness on overconsumption and suggests users to use pieces of clothing that they already own.
 
 ---
 
