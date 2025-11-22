@@ -38,6 +38,12 @@ body {
   text-decoration: underline;
 }
 
+/*Login*/
+.login{
+  margin: 10rem;
+  padding: 10rem 20rem;
+}
+
 /* Home */
 .hero {
   text-align: center;
