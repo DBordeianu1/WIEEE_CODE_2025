@@ -1,27 +1,10 @@
-# WIEEE Code Template
-
-Welcome to the **WIEEE Code Starter Template**!  
-This React template gives you a clean, ready-to-use starting point for your hackathon project.
-
-It includes:  
-- A **Home page** with a hero section and a button to navigate  
-- A **Second page** for describing your project or features  
-- Easy-to-customize layout and components  
+# **"I don't know what to wear"** is an issue that many of us encounter on a day-to-day basis.
+## Our new years resolution: Reducing overconsumption and reusing pieces of clothing that we already own. 
 
 ---
 
-## 🚀 Getting Started
+Our solution: **eCloset**, an intelligent outfit recommender, will output different outfit options to wear according to the weather. It raises awareness on overconsumption and suggests users to use pieces of clothing that they already own.
 
-1. **Clone this repository** (or use the template button on GitHub):
+---
 
-git clone https://github.com/stupnd/WIEEE-Code-Template.git
-cd hackathon-template
-
-2. **Install dependencies**:
-npm install
-
-3. **Run the development server**:
-npm run dev
-
-Open your browser and go to http://localhost:5173 to see the website.
-
+### By Oleksandra, Iman, and Daniela
