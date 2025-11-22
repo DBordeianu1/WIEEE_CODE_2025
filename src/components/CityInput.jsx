@@ -26,7 +26,7 @@ function CityInput({ onSubmit }) {
   return (
     <form onSubmit={handleSubmit} className="city-input-form">
       <label htmlFor="city-input">
-        Where are you?
+        What city are you in?
       </label>
       <input
         type="text"
