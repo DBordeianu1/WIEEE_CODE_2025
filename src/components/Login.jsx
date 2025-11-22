@@ -1,7 +1,7 @@
-
+import {useNavigate} from 'react-router-dom'
 export default function Login () {
+  const navigate=useNavigate();
     return (
-    <button onClick={() => navigate('/about')}>Login
-    </button>
+    <button onClick={() => navigate('/chat')}>Login</button>
   )
 }
