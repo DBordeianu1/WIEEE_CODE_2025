@@ -14,6 +14,7 @@ export default function Home() {
           Click on login to get outfit recommendations!
         </p>
         <button onClick={() => navigate('/about')}>Go to Project Page</button>
+        {' '}
         <Login />
       </section>
     </div>
