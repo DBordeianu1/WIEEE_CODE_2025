@@ -38,6 +38,12 @@ body {
   text-decoration: underline;
 }
 
+/* Styling for the image */
+.navbar-logo {
+  height: 200px;
+  width: auto; 
+}
+
 /*Login*/
 .login{
   margin: 10rem;
