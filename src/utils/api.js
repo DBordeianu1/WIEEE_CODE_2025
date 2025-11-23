@@ -1,6 +1,5 @@
-// Get the API key from the environment variables set in .env.local
-const API_KEY = "f89ab4076e6f473ab6c185156252211";
-const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
+const API_KEY = "467453c81bc94754a9200727252311";
+const BASE_URL = "http://api.weatherapi.com/v1/current.json";
 
 /**
  * Fetches real weather data from OpenWeatherMap.
@@ -12,15 +11,12 @@ export async function fetchWeatherData(city) {
         throw new Error("OpenWeatherMap API Key is missing. Check your .env.local file.");
     }
     
-    // Request temperature in Celsius (units=metric)
-    const url = `${BASE_URL}?q=${city}&units=metric&appid=${API_KEY}`;
+    const url = `${BASE_URL}?q=${city}&key=${API_KEY}`;
 
     try {
         const response = await fetch(url);
-        
-        
+    
         if (!response.ok) {
-            
             const errorData = await response.json();
             if (response.status === 404) {
                 throw new Error(`City not found: ${city}`);
@@ -30,18 +26,16 @@ export async function fetchWeatherData(city) {
 
         const data = await response.json();
         
-        
         return {
-            city: data.name,
-            temp: Math.round(data.main.temp), // Round temperature for display
-            condition: data.weather[0].main.toLowerCase(), // e.g., 'clouds', 'rain', 'clear'
-            description: data.weather[0].description,
-            icon: data.weather[0].icon
+            city: data.location.region,
+            temp: Math.round(data.current.feelslike_c),
+            condition: data.current.condition.text.toLowerCase(),
+            description: data.current.last_updated,
+            icon: data.current.condition.icon,
         };
 
     } catch (error) {
         console.error("Failed to fetch weather data:", error);
-        // Rethrow the error to be caught by the calling component (Chat.jsx)
         throw error;
     }
 }
@@ -53,18 +47,18 @@ export async function fetchWeatherData(city) {
 export function getClothingSuggestion(weather, userCloset = {}) {
     const { temp, condition, city } = weather;
     
-    let suggestion = `It's **${temp}°C** and **${condition}** in ${city}.`;
+    let suggestion = `It's ${temp}°C and ${condition} in ${city}.`;
 
     if (temp < 5) {
-        suggestion += " **Extremely Cold !** You need winter gear: thermal layers, hat, gloves, and a scarf.";
+        suggestion += " Extremely Cold ! You need winter gear: thermal layers, hat, gloves, and a scarf.";
     } else if (temp <= 12) {
-        suggestion += " It's chilly! You'll need **layers**: a warm jacket or coat, sweater, and long pants.";
+        suggestion += " It's chilly! You'll need layers: a warm jacket or coat, sweater, and long pants.";
     } else if (temp <= 22) {
         suggestion += " It's comfortable. A light jacket, jeans, or a sweater is perfect.";
     } else if (temp > 22 && condition === 'Clear') {
-        suggestion += " It's **warm and sunny**!Don't forget sunscreen!";
+        suggestion += " It's warm and sunny!Don't forget sunscreen!";
     } else if (condition === 'Rain' || condition === 'Drizzle') {
-        suggestion += " Be sure to grab a **raincoat, waterproof shoes, and an umbrella**!";
+        suggestion += " Be sure to grab a raincoat, waterproof shoes, and an umbrella!";
     } else {
         suggestion += " A simple outfit and a light layer should be fine.";
     }

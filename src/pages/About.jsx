@@ -8,7 +8,7 @@ export default function About() {
       <div className="card-grid">
         <div className="card">
           <h3>Intergrated features</h3>
-          <p>Explain your project’s main feature here.</p>
+          <p>- Uses a weather API to generate outfits suggestions. </p>
         </div>
         <div className="card">
           <h3>The Impact</h3>
@@ -25,6 +25,7 @@ export default function About() {
           <p>- If an item of clothing has not been worn in a while, eCloset's chatbot will suggest to donate it to those in need.</p>
           <p>- eCloset's chatbot will not only take into consideration the weather, but also the event that the user is attending when generating the different outfit suggestions.</p>
           <p>- The items of clothing of the user will be tracked using a database. The user will be able to add items through a camera feature.</p>
+          <p>- Intergrating user authentication when the user clicks on the login button.</p>
         </div>
       </div>
     </div>
