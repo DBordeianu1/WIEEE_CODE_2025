@@ -27,6 +27,7 @@ export default function About() {
           <p>- eCloset's chatbot will not only take into consideration the weather, but also the event that the user is attending when generating the different outfit suggestions.</p>
           <p>- The items of clothing of the user will be tracked using a database. The user will be able to add items through a camera feature.</p>
           <p>- Intergrating user authentication when the user clicks on the login button.</p>
+          <p>- Adding a donate page.</p>
         </div>
       </div>
     </div>
