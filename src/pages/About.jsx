@@ -22,7 +22,7 @@ export default function About() {
         </div>
         <div className="card">
           <h3>In the Near Future</h3>
-          <p>- If an item of clothing has not been worn in a while, eCloset's chatbot will suggest to maybe donate it to those in need.</p>
+          <p>- If an item of clothing has not been worn in a while, eCloset's chatbot will suggest to donate it to those in need.</p>
           <p>- eCloset's chatbot will not only take into consideration the weather, but also the event that the user is attending when generating the different outfit suggestions.</p>
           <p>- The items of clothing of the user will be tracked using a database. The user will be able to add items through a camera feature.</p>
         </div>
