@@ -9,6 +9,7 @@ export default function About() {
         <div className="card">
           <h3>Intergrated features</h3>
           <p>- Uses a weather API to generate outfits suggestions. </p>
+          <p>- Leads to a web page where the user can view statistics about overconsumption from CBC. </p>
         </div>
         <div className="card">
           <h3>The Impact</h3>
