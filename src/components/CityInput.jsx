@@ -51,7 +51,7 @@ return (
         
         {/* New class for the button */}
         <button type="submit" className="submit-button">
-          ➡️
+          Get a suggestion
         </button> 
         
       </div>
