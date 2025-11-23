@@ -24,25 +24,37 @@ function CityInput({ onSubmit }) {
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit} className="city-input-form">
-      <label htmlFor="city-input">
-        What city are you in?
-      </label>
-      <input
-        type="text"
-        id="city-input"
-        name="city"
-        value={city}
-        onChange={(e) => setCity(e.target.value)} 
-        placeholder="e.g., London, Tokyo, New York"
-        required
-        // browser autocomplete
-        autocomplete="address-level2" 
-      />
-      <button type="submit">
-        Get Weather & Suggestions
-      </button>
+return (
+    // Change the form class for the new styling
+    <form onSubmit={handleSubmit} className="ai-form-container">
+        
+      {/* WRAPPER: Helps control the input and button layout */}
+      <div className="input-group"> 
+        
+        {/* We can hide the label in this modern design for a cleaner look, 
+            but keep it for accessibility (screen readers) */}
+        <label htmlFor="city-input" className="visually-hidden">
+          What city are you in?
+        </label>
+        
+        <input
+          type="text"
+          id="city-input"
+          name="city"
+          value={city}
+          onChange={(e) => setCity(e.target.value)} 
+          placeholder="Enter city, e.g., Tokyo" // Shortened placeholder for style
+          required
+          autoComplete="address-level2"
+          className="city-input-field" // New class for styling
+        />
+        
+        {/* New class for the button */}
+        <button type="submit" className="submit-button">
+          ➡️
+        </button> 
+        
+      </div>
     </form>
   );
 }
